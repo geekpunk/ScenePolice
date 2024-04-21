@@ -42,6 +42,4 @@ jobs:
           run: gsutil -m rsync -d -c -r public gs://scenepolice
          
         - name: Clear HTML Cache
-          run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://scenepolice/**/*.html
-        - name: Set Cache for css
-          run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://scenepolice/css/*.css
+          run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://scenepolice/*
