@@ -6,11 +6,10 @@ theme = "paper"
 [markup.goldmark.renderer]
 unsafe= true
 
-[deployment]
-
-[[deployment.targets]]
+#[deployment]
+#[[deployment.targets]]
 # An arbitrary name for this target.
-name = "production"
+#name = "production"
 
 
 # Google Cloud Storage -- see https://gocloud.dev/howto/blob/#gcs
