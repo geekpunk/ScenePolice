@@ -1,0 +1,40 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Scene Police Records'
+theme = "paper"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[deployment]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "production"
+
+
+# Google Cloud Storage -- see https://gocloud.dev/howto/blob/#gcs
+URL = "gs://scenepolice"
+
+[menu]
+
+  [[menu.main]]
+    identifier = ""
+    name = "Home"
+    url = "/"
+    weight = 9
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "Releases"
+    name = "Releases"
+    url = "/releases/"
+    weight = 11
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 12
