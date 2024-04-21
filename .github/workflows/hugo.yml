@@ -1,0 +1,28 @@
+# build scene police site
+name: Deploy Hugo site 
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+      Deploy:
+        runs-on: ubuntu-latest
+        steps:
+    
+        - uses: actions/checkout@v1
+          with:
+            submodules: true
+    
+        - name: Setup Hugo
+          uses: peaceiris/actions-hugo@v2
+          with:
+            hugo-version: '0.114.0'
+            extended: true
+    
+        - name: Build site
+          run: hugo --minify
+    
+        - name: List output files
+          run: ls public
