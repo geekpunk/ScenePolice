@@ -39,7 +39,7 @@ jobs:
           uses: 'google-github-actions/setup-gcloud@v2'
         
         - name: Deploy
-          run: gsutil -m rsync -d -c -r public {{ secrets.GCP_SA_KEY }}gs://scenepolice
+          run: gsutil -m rsync -d -c -r public gs://scenepolice
          
         - name: Clear HTML Cache
           run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://scenepolice/*
